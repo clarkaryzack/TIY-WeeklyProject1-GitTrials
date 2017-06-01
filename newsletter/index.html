@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <!-- favicon BEGIN -->
+    <link rel="apple-touch-icon" sizes="76x76" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favicon END -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Bent Creek Ceramics - Newsletter</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="logo"></div>
+      <nav>
+        <a href="../index.html" class="navlink">home</a>
+        <a href="../about/index.html" class="navlink">about</a>
+        <a href="#" class="navlink active">newsletter</a>
+      </nav>
+    </header>
+
+    <main class="newsMain">
+
+      <form class="newsletterForm" id="newsletterForm" action="#" method="POST">
+        <fieldset class="newsFormFieldset">
+
+          <h1 class="newsTitle">
+            Sign Up for Our Weekly Newsletter
+          </h1>
+          <h2 class="newsSubtitle">
+            Stay up to date with events, activities, news and specials.
+          </h2>
+
+          <div class="newsFormInputWrapper">
+            <label for="nameInput"></label>
+            <input class="newsFormInput" type="text" id="nameInput" placeholder="Name">
+          </div>
+          <div class="newsFormInputWrapper">
+            <label for="emailInput"></label>
+            <input class="newsFormInput" type="email" id="emailInput" placeholder="Email">
+          </div>
+          <div class="newsFormSubmit">
+            <button class="signupButton">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+
+    </main>
+
+    <footer>
+      <p class="footer-txt">
+        Copyright 2017, Bent Creek Ceramics
+      </p>
+    </footer>
+
+    <!-- Inserting the required javascript... -->
+    <script type="text/javascript">
+      var nameInput = document.getElementById('nameInput');
+      var emailInput = document.getElementById('emailInput');
+      var signupButton = document.getElementById('signupButton');
+      signupButton.addEventListener('click', function(e) {
+        var nameVal = nameInput.value;
+        var emailVal = emailInput.value;
+        if (nameVal && emailVal) {
+          alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+          nameInput.value = "";
+          emailInput.value = "";
+        } else {
+          alert('We would love for you to sign up, please provide both your name and email address.');
+        }
+      });
+    </script>
+  </body>
+</html>
